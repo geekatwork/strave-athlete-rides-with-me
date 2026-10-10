@@ -146,46 +146,14 @@ Searching for shared activities...
 
 ## 🔒 Security & Privacy
 
-### For Local Use
-
 ✅ **Safe Practices**:
-- `.env` file is in `.gitignore` - credentials won't be committed
+- Keep Strava credentials in `.env`
+- `.env` is ignored by git and should never be committed
 - All sensitive data stays in environment variables
 - No credentials are logged to console
 - Tokens are only used for API authentication
 
-### Before Publishing to GitHub
-
-⚠️ **Critical Security Checks**:
-
-1. **Verify `.env` is NOT staged**:
-   ```bash
-   git status
-   ```
-   `.env` should NOT appear in the status output
-
-2. **Check git history** (verify credentials were never committed):
-   ```bash
-   git log --all --full-history -- ".env"
-   git log --grep="token\|secret\|CLIENT_ID" --oneline
-   ```
-
-3. **Scan for exposed secrets**:
-   ```bash
-   git log -p | grep -i "STRAVA_\|token\|secret" | head -20
-   ```
-
-4. **If credentials were exposed**:
-   - ⚠️ **Immediately regenerate** your Strava API credentials
-   - Remove the old credentials from Strava's app settings
-   - Create new credentials
-   - Update your local `.env`
-
-### For Sharing The Code
-
-- ✅ Safe to share: TypeScript source code, logic, setup documentation
-- ❌ NEVER share: Your `.env` file or any credentials
-- ❌ NEVER share: Strava Client IDs, Client Secrets, or Refresh Tokens
+If credentials are ever exposed, immediately regenerate your Strava API credentials and update your local `.env`.
 
 ## 🐛 Troubleshooting
 
@@ -369,7 +337,7 @@ This is a personal project created in a weekend, but improvements are welcome! F
 
 ## 📝 License
 
-This project is provided as-is for personal use. Feel free to adapt and modify it for your own cycling adventures.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## 🎉 Acknowledgments
 
