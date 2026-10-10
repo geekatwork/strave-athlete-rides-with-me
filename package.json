@@ -1,0 +1,16 @@
+{
+  "name": "strava-athlete-rides-with-me",
+  "version": "1.0.0",
+  "description": "Strava rides an athlete has done with me",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.10",
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}

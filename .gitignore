@@ -1,0 +1,38 @@
+# Environment Variables - NEVER commit these files
+*.env
+*.env.local
+*.env.*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.js
+*.js.map
+*.d.ts
+
+# IDE & OS
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Data files - large binary/GPS data, keep structure only
+data/activities/*.fit.gz
+data/activities/*.fit
+data/activities/*.gpx
+data/activities/converted/*.gpx
+data/activities/converted/*.csv
+data/activities/converted/temp/
+data/gpx/*.gpx
+data/svg/*.svg
+data/combined/*.pdf
+data/combined/*.svg

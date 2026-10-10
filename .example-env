@@ -1,0 +1,11 @@
+# Strava API Configuration
+# Get these credentials from https://www.strava.com/settings/api
+STRAVA_CLIENT_ID=your_client_id_here
+STRAVA_CLIENT_SECRET=your_client_secret_here
+STRAVA_REFRESH_TOKEN=your_refresh_token_here
+
+# Target Athlete IDs
+# Comma-separated list of Strava athlete IDs to search for shared activities
+# Find athlete IDs in Strava activity URLs or use Strava's API
+# Example: 12345,67890
+TARGET_ATHLETES=target_athlete_id
